@@ -1,0 +1,101 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(wall1.jpg);
+    background-size: cover;
+
+}
+
+.loginbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgb(195, 186, 186);
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgb(130, 128, 128);
+    border-radius: 10px;
+}
+
+
+.loginbox h1{
+    margin: 0 0 30px;
+    padding: 0;
+    color: rgb(0, 0, 0);
+}
+
+/*tulisan username dan password*/
+.loginbox .userbox{
+    position: relative;
+}
+
+.loginbox .userbox input{
+    width: 100%;
+    padding: 7px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background-color: transparent;
+}
+
+/*tulisan username dan password*/
+.loginbox .userbox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+    transition: 0.5s ease ;
+}
+
+.loginbox .userbox input:focus ~ label,
+.loginbox .userbox input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.loginbox form .submit a{
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    padding: 10px 120px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius:  25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s ease;
+    margin-top: 50px;
+    letter-spacing: 4px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.loginbox form .submit a:hover{
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+a{
+    color: white;
+}
+
+.regist{
+    text-align: center;
+
+}
+.regist a{
+    color: white;
+}
+

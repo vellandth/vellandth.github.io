@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+ 
+}
+
+header{
+    position: fixed;
+	
+	/*jarak ke luar*/
+    top: 0; left: 0; right: 0;
+    background: white;
+    box-shadow: 0 5px 10px rgb(199, 198, 198);
+
+	/*luas dan lebar kotak*/
+    padding: 0px 7%;
+    display: flex;
+
+	/*ketengah antara atas dan bawah*/
+    align-items: center;
+
+	/*jarak anatara logo dan nav*/
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+header .menubar ul{
+    list-style: none;
+}
+
+header .menubar ul li{
+    position: relative;
+    float: left;
+}
+
+header .menubar ul li a{
+    padding: 20px;
+    color: rgb(61, 56, 56);
+    display: block;  
+}
+
+
+header .menubar ul li a::after{
+	content: '';
+	width: 0;
+	height: 3px;
+	background:#435585;
+	position: absolute;
+	left: 0;
+    
+    /* untuk jarak garik ke kata garis*/
+	bottom: 10px;
+
+	transition: 0.5s;
+}
+
+/*panjang garis*/
+header .menubar ul li a:hover::after{
+	width: 100%;
+}
+
+header .menubar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    background: white;
+    display: none;
+}
+
+header .menubar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgb(232, 216, 216);
+}
+
+header .menubar ul li ul li ul{
+    /*  jarak drop2 ke drop1 */
+    left: 100px;
+
+    /*  sejajarin drop2 ke drop1 */
+    top: 0;
+}
+
+header .menubar ul li:focus-within > ul,
+header .menubar ul li:hover > ul{
+    display: initial ;
+}
+
+video{
+    width: 100%;
+}
+/*---------------------------------------------------------------------------------about--------------------------------------------------------------------------------------------------------------*/  
+
+.text-about{
+	text-align: center;
+    padding: 100px;
+}
+
+/*---------------------------------------------------------------------------------galery--------------------------------------------------------------------------------------------------------------*/  
+.galery{
+    align-items: center;
+    padding: 100px;
+}
+.galery h1{
+    text-align: center;
+}
+.list{
+    width: 160px;
+    height: 5px;
+    background-color: #435585;
+}
+
+
+.photo-list{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.photo img{
+    width: 100%;
+
+}
+/*--------------------------------------------------------------------------------founder--------------------------------------------------------------------------------------------------------------*/
+
+.team h1{
+    text-align: center;
+    align-items: center;
+}
+
+.list{
+    width: 160px;
+    height: 5px;
+    background-color: #435585;
+}
+
+
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;
+}
+
+.team .team_box .profile .info .name{
+    color: #435585;
+
+}
+
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.team .team_box .profile .info .team_icon i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+    color: #435585;
+}
+/*--------------------------------------------------------------------------------review--------------------------------------------------------------------------------------------------------------*/
+.container{
+    padding: 40px 0;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.review{
+    /*jarak antara review
+    max-width: 1200px;*/
+    padding: 0 20px;
+}
+
+.list{
+    width: 160px;
+    height: 5px;
+    background: #435585;
+
+    /*  jarak garis ke tulisan review // biar garisnya tengah */
+    margin: 7px auto;
+}
+
+.star a{
+    color: #435585;
+}
+
+/*  biar menjajar ke samping reviewnya */
+.review-list{
+    display: flex;
+}
+
+.profil img{
+    margin: 30px auto 5px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+/*--------------------------------------------------------------------------------maps--------------------------------------------------------------------------------------------------------------*/
+.maps h1{
+    text-align: center;
+}
+
+.maps .list{
+    width: 160px;
+    height: 5px;
+    margin: 7px auto;
+    background: #435585;
+}
+.maps img{
+    width: 100%;
+}
+
+
+/*--------------------------------------------------------------------------------address--------------------------------------------------------------------------------------------------------------*/
+.address{
+    color: #435585;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/*--------------------------------------------------------------------------------copyright--------------------------------------------------------------------------------------------------------------*/
+
+footer{
+    /*---- biar copyright di bawah -----
+    position: fixed;
+    bottom: 0;*/
+
+    /*---- biar copyright full sampai ujung -----*/
+    width: 100%;
+	width: 100%;
+	text-align: center;
+	/*---- jarak copyright ke atas -----*/
+	padding: 5px 0;
+	background-color: 435585;
+	color: white;
+}
+
+.main{
+    display: flex;
+}
+
+/*---- jarak antar informasi -----*/
+.col{
+    width: 25%;
+    color: rgb(255, 255, 255);
+}
+
+.col ul li{
+    list-style: none;
+    color: black;
+}
+
+.col ul li a{
+    color: rgb(0, 0, 0);
+}
+.social{
+	margin-top: 30px;
+}
+.social a{
+	text-decoration: none;
+	font-size: 30px;
+	margin-right: 15px;
+	color: rgb(255, 255, 255);
+	display: inline-block;
+	transition: transform 0.5s;
+}
+.social a:hover{
+	color: rgb(0, 0, 0);
+	transform: translateY(-5px);
+}
+
+
